@@ -6,17 +6,17 @@ class App extends Component {
         posts: [
             {
                 id: 1,
-                title: 'O titulo 1',
+                title: 'O titulo 01',
                 body: 'O corpo 1'
             },
             {
                 id: 2,
-                title: 'O titulo 2',
+                title: 'O titulo 02',
                 body: 'O corpo 2'
             },
             {
                 id: 3,
-                title: 'O titulo 3',
+                title: 'O titulo 03',
                 body: 'O corpo 3'
             }
         ]
