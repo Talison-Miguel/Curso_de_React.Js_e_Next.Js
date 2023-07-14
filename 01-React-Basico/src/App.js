@@ -24,7 +24,7 @@ class App extends Component {
     }
 
     componentDidMount() {
-        console.log('oi')
+        console.log('oi...')
     }
 
     render() {
