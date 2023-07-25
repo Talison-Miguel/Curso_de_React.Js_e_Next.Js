@@ -3,7 +3,28 @@ import { Component } from 'react';
 
 class App extends Component {
     state = {
+<<<<<<< HEAD
         posts: []
+=======
+        counter: 0,
+        posts: [
+            {
+                id: 1,
+                title: 'O titulo 01',
+                body: 'O corpo 1'
+            },
+            {
+                id: 2,
+                title: 'O titulo 02',
+                body: 'O corpo 2'
+            },
+            {
+                id: 3,
+                title: 'O titulo 03',
+                body: 'O corpo 3'
+            }
+        ]
+>>>>>>> 9fa704130e47be737305d8c70dda884bf1165545
     }
 
     componentDidMount() {
