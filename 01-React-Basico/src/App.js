@@ -3,85 +3,48 @@ import { Component } from 'react';
 
 class App extends Component {
     state = {
-        counter: 0,
-        posts: [
-            {
-                id: 1,
-                title: 'O titulo 01',
-                body: 'O corpo 01'
-            },
-            {
-                id: 2,
-                title: 'O titulo 02',
-                body: 'O corpo 02'
-            },
-            {
-                id: 3,
-                title: 'O titulo 03',
-                body: 'O corpo 03'
-            }
-        ]
+        posts: []
     }
-
-    timeOutUpdate = null
 
     componentDidMount() {
-        this.handleTimeOut()
+        this.laodPosts()
     }
 
-    componentDidUpdate() {
-        this.handleTimeOut()
-    }
+    laodPosts = async () => {
+        const postResponse = fetch('https://jsonplaceholder.typicode.com/posts')
+        const photosResponse = fetch('https://jsonplaceholder.typicode.com/photos')
 
-    handleTimeOut = () => {
-        const { posts, counter } = this.state
-        posts[0].title = 'Título atualizado'
+        const [posts, photos] = await Promise.all([postResponse, photosResponse])
+    
+        const postsJson = await posts.json()
+        const photosJson = await photos.json()
 
-        this.timeOutUpdate = setTimeout(() => {
-            this.setState({ posts, counter: counter + 1})
-        }, 2000)
-    }
+        const postsAndPhotos = postsJson.map((post, index) => {
+            return { ...post, cover: photosJson[index].url }
+        })
 
-    componentWillUnmount() {
-        clearTimeout(this.timeOutUpdate)
+        this.setState({posts: postsAndPhotos})
     }
 
     render() {
-        const { posts, counter } = this.state
+        const { posts } = this.state
 
         return (
-            <div className="App">
-                <h1>{counter}</h1>
-                {posts.map((el) => (
-                    <div key={el.id}>
-                        <h1>{el.title}</h1>
-                        <p>{el.body}</p>
-                    </div>
-                ))}
-            </div>
+            <section className='container'>
+                <div className="posts">
+                    {posts.map(el => (
+                        <div className='post'>
+                            <img src={el.cover} alt={el.title}></img>
+                            <div key={el.id} className='postCard'>
+                                <h1>{el.title}</h1>
+                                <p>{el.body}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
         )
     };
 }
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Primeiro projeto do curso de React.Js
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
 export default App;
