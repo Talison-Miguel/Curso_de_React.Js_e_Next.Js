@@ -3,7 +3,7 @@ export default function PostCard({title, cover, body, id}) {
         <div className='post'>
             <img src={cover} alt={title}></img>
             <div className='postCard'>
-                <h1>{title}</h1>
+                <h2>{title}</h2>
                 <p>{body}</p>
             </div>
         </div>
