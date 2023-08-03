@@ -1,5 +1,8 @@
-const numeros = [100, 200, 300, 400, 500, 600, 700, 800, 900]
-const [primeiroNum, , terceiroNum, , quartoNum] = numeros
+const numeros = [
+    [1, 2, 3], [4, 5, 6], [7, 8, 9]
+]
 
-console.log(primeiroNum, terceiroNum)
-    
+const [list1m, list2, list3] = numeros
+
+console.log(numeros[1][2])
+console.log(list3)
