@@ -1,5 +1,5 @@
 import PostCard from '../PostCard';
-
+import './style.css'
 
 export default function Posts({posts}) {
     return (

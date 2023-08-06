@@ -1,0 +1,13 @@
+.container {
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: #eee;
+  padding: 30px;
+}
+
+.button-container {
+  height: 60px;
+  display: flex;
+  align-items: flex-end;
+}
