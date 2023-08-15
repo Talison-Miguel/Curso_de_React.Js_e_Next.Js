@@ -1,9 +1,8 @@
+//ARRAY FILTER
 const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27]
 
 const numFilter = numeros.filter(num => num > 10)
 console.log(numFilter)
-
-
 
 const pessoas = [
     { nome: 'Talison', idade: 62 },
@@ -20,5 +19,27 @@ console.log(pessoasNome5)
 const pessoasMaisVelhas = pessoas.filter(pessoa => pessoa.idade >= 50)
 console.log(pessoasMaisVelhas)
 
-const pessoasTerminadasComA = pessoas.filter(pessoa => pessoa.nome.toLowerCase.charAt(pessoa.nome.length - 1) === 'a')
+const pessoasTerminadasComA = pessoas.filter(pessoa => pessoa.nome.charAt(pessoa.nome.length - 1) === 'a')
 console.log(pessoasTerminadasComA)
+
+
+
+console.log('---------------------------------')
+//ARRAY MAP
+
+const numerosDobrados = numeros.map(num => num * 2)
+console.log(numerosDobrados)
+
+const nomePessoa = pessoas.map(pessoa => pessoa.nome)
+console.log(nomePessoa)
+
+const idades = pessoas.map(pessoa => ({ idade: pessoa.idade }))
+console.log(idades)
+
+const objId = pessoas.map((pessoa, i) => {
+    const newObj = { ...pessoa }
+    newObj.id = i
+    return newObj
+})
+console.log(objId)
+console.log(pessoas)
