@@ -43,3 +43,23 @@ const objId = pessoas.map((pessoa, i) => {
 })
 console.log(objId)
 console.log(pessoas)
+
+
+
+
+
+console.log('---------------------------------')
+//----ARRAY REDUCE----
+
+const totalPares = numeros.reduce((acumulator, valorAtual, i, array) => {
+    if(valorAtual % 2 === 0) acumulator += valorAtual
+    return acumulator
+}, 0)
+
+console.log(totalPares)
+
+
+const maisVelha = pessoas.reduce((acumulator, valorAtual) => {
+    if(acumulator.idade > valorAtual.idade) return acumulator    
+})
+console.log(maisVelha)
