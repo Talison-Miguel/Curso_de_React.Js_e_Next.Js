@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Posts /> should math snapshot 1`] = `
+exports[`<Posts /> should match snapshot 1`] = `
 <div
   class="posts"
 >
@@ -12,7 +12,7 @@ exports[`<Posts /> should math snapshot 1`] = `
       src="img/img1.png"
     />
     <div
-      class="postCard"
+      class="post-content"
     >
       <h2>
         title 1
@@ -32,7 +32,7 @@ exports[`<Posts /> should math snapshot 1`] = `
       src="img/img2.png"
     />
     <div
-      class="postCard"
+      class="post-content"
     >
       <h2>
         title 2
@@ -52,7 +52,7 @@ exports[`<Posts /> should math snapshot 1`] = `
       src="img/img3.png"
     />
     <div
-      class="postCard"
+      class="post-content"
     >
       <h2>
         title 3
@@ -65,10 +65,4 @@ exports[`<Posts /> should math snapshot 1`] = `
     </div>
   </div>
 </div>
-`;
-
-exports[`<Posts /> should math snapshot 2`] = `
-<div
-  class="posts"
-/>
 `;

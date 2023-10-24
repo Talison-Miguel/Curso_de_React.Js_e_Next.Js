@@ -3,7 +3,6 @@
 exports[`<Button /> should match snapshot 1`] = `
 <button
   class="button"
-  disabled=""
 >
   Load more
 </button>

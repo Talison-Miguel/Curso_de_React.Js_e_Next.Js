@@ -9,7 +9,7 @@ exports[`<PostCard /> should match snapshot 1`] = `
     src="img/img.png"
   />
   <div
-    class="postCard"
+    class="post-content"
   >
     <h2>
       title 1

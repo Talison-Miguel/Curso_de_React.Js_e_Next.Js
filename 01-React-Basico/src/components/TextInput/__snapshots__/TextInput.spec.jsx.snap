@@ -3,7 +3,7 @@
 exports[`<TextInput /> should match snapshot 1`] = `
 <div>
   <input
-    class="textInput"
+    class="text-input"
     placeholder="Type your search"
     type="search"
     value=""
