@@ -5,7 +5,7 @@ module.exports = {
     htmlWhitespaceSensitivity: 'ignore',
     insertPragma: false,
     jsxSingleQuote: false,
-    printWidth: 80,
+    printWidth: 140,
     proseWrap: 'always',
     quoteProps: 'as-needed',
     requirePragma: false,
@@ -16,4 +16,4 @@ module.exports = {
     useTabs: false,
     vueIndentScriptAndStyle: false,
     embeddedLanguageFormatting: 'off',
-  };
+};

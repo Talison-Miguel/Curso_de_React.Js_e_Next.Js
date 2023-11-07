@@ -5,12 +5,7 @@ module.exports = {
         es2021: true,
         jest: true,
     },
-    extends: [
-        'eslint:recommended',
-        'plugin:react/recommended',
-        'plugin:react-hooks/recommended',
-        'plugin:prettier/recommended',
-    ],
+    extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:react-hooks/recommended', 'plugin:prettier/recommended'],
     parserOptions: {
         ecmaFeatures: {
             jsx: true,
@@ -26,5 +21,6 @@ module.exports = {
     },
     rules: {
         'react/react-in-jsx-scope': 'off',
+        'no-unused-vars': 'off',
     },
 };
