@@ -1,40 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
-// import { Component } from 'react';
+
+import logo from './logo.svg';
+import { useState, useEffect } from 'react';
 
 function App() {
-    const [reverse, setReverse] = useState(false);
     const [counter, setCounter] = useState(0);
-    const reverseClass = reverse ? 'reverse' : '';
+    const [counter2, setCounter2] = useState(0);
 
-    const handleClick = () => {
-        setReverse((reverse) => !reverse);
+    const eventFn = () => {
+        console.log('H1 clickado');
     };
 
-    const handleIncrement = () => {
-        setCounter((prevCounter) => prevCounter + 1);
-    };
+    //ComponentDidUpdate - execulta toda vez que o component atualiza
+    // useEffect(() => {
+    //     console.log('componentDidUpdate');
+    // });
+
+    //ComponentDidMount - execulta 1x
+    useEffect(() => {
+        document.querySelector('h1')?.addEventListener('click', eventFn);
+
+        //ComponenteWillAmout - limpeza
+        return () => {
+            document.querySelector('h1')?.removeEventListener('click', eventFn);
+        };
+    }, []);
+
+    //Com dependência - execulta toda vez que a depedencia mudar
+    useEffect(() => {
+        console.log('C1: ', counter, ' C2:', counter2);
+    }, [counter, counter2]);
 
     return (
         <div className="App">
-            <header className="App-header">
-                <img src={logo} className={`App-logo ${reverseClass}`} alt="logo" />
-
-                <h1>Contador: {counter}</h1>
-
-                <p>
-                    <button type="number" onClick={handleClick}>
-                        Reverse {reverseClass}
-                    </button>
-                </p>
-
-                <p>
-                    <button type="number" onClick={handleIncrement}>
-                        Increment {counter}
-                    </button>
-                </p>
-            </header>
+            <p>Teste 1</p>
+            <h1>
+                C1: {counter} | C2: {counter2}
+            </h1>
+            <button onClick={() => setCounter(counter + 1)}>+</button>
+            <button onClick={() => setCounter2(counter2 + 1)}>+ 2</button>
         </div>
     );
 }
