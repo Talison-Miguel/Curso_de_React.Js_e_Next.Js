@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body { 
+            font-family: sans-serif;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 500px;
+        }
+
+        table caption {
+            caption-side: bottom;
+            text-align: right;
+            font-style: italic;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        table td, table th {
+            border: 1px solid gray;
+            padding: 5px;
+            text-align: left;
+        }
+
+        tfoot td, table th {
+            background-color: #ddd;
+        }
+
+        tfoot td {
+            font-style: italic;
+            text-align: center;
+        }
+
+        div {
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Titulo 1</th>
+                    <th>Titulo 2</th>
+                    <th>Titulo 3</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                <caption>Descrição da tabela</caption>
+                <tr>
+                    <td>Corpo 1</td>
+                    <td>Corpo 2</td>
+                    <td>Corpo 3</td>
+                </tr>
+                <tr>
+                    <td>Aqui</td>
+                    <td>Corpo 2</td>
+                    <td>Corpo 3</td>
+                </tr>   
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" rowspan="2"></td>
+                    <td>Total</td>
+                </tr>
+                <tr>
+                    <td >100R$</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+</body>
+</html>
