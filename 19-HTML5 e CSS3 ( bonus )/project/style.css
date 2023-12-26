@@ -1,0 +1,4 @@
+/* Começa com ^= */
+[meu-atributo^='v'] {
+    color: red;
+}
