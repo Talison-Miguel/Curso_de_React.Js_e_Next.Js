@@ -1,11 +1,16 @@
+import { useEffect, useState } from 'react';
 import { useCounterContext } from '../../contexts/CounterContext';
 
 export const Home = () => {
-  const [state, dispatch] = useCounterContext();
+  const [state, actions] = useCounterContext();
+
+  useEffect(() => {
+    actions.increase();
+  }, [actions]);
 
   return (
     <div>
-      <h1>Ola mundo !!</h1>
+      <h1 onClick={() => actions.increase()}>Ola mundo !!</h1>
     </div>
   );
 };
