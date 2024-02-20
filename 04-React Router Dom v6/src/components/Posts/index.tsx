@@ -1,7 +1,7 @@
-import { useParams, useSearchParams } from 'react-router-dom'
+import { Outlet, useParams, useSearchParams } from 'react-router-dom'
 import './style.css'
 
-export function Post() {
+export function Posts() {
     const params = useParams()
     const { id } = params
     const [searchParams] = useSearchParams();
@@ -11,6 +11,7 @@ export function Post() {
     return (
         <div>
             <h1>Post {`Param: ${id}`} {`QS: ${searchParams.get('page')}`}</h1>
+            <Outlet/>
         </div>
     )
 }
