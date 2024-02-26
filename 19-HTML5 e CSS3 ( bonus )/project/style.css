@@ -28,6 +28,18 @@ body {
     min-height: 100px;
 }
 
+.grid div:nth-child(5) {
+    background-color: chartreuse;
+    grid-row: span 4;
+    grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+    .grid div:nth-child(5) {
+        grid-column: span 1;
+    }
+}
+
 @media (max-width: 321px) {
     .grid {
         justify-items: center;
