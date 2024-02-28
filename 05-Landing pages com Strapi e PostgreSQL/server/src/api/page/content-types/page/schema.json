@@ -25,8 +25,20 @@
     "sections": {
       "type": "dynamiczone",
       "components": [
-        "section.section-two-colons"
+        "section.section-two-colons",
+        "section.section-grid",
+        "section.section-content"
       ],
+      "required": true
+    },
+    "footer_text": {
+      "type": "blocks",
+      "required": true
+    },
+    "menu": {
+      "type": "component",
+      "repeatable": false,
+      "component": "menu.menu",
       "required": true
     }
   }
