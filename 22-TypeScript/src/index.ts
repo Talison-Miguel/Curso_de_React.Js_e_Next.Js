@@ -19,3 +19,22 @@ function soma(x: number, y: number): number {
 }
 
 const fun: (x: number, y: number) => number = (x, y) => x + y;
+
+function semRetorno(...rest: string[]): void {
+    console.log('TESTE' + rest);
+}
+
+semRetorno('talison', 'miguel');
+// ----------------------------------------
+
+interface ObjectProps {
+    key1: string;
+    key2: string;
+    [key: string]: unknown;
+}
+
+const objA: ObjectProps = {
+    key1: 'teste',
+    key2: 'teste2',
+    teste: 'fdfd',
+};
