@@ -38,3 +38,5 @@ const objA: ObjectProps = {
     key2: 'teste2',
     teste: 'fdfd',
 };
+
+const arr: string[] = [];
