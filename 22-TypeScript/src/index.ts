@@ -40,3 +40,6 @@ const objA: ObjectProps = {
 };
 
 const arr: string[] = [];
+
+const dadosClient: [number, string] = [1, 'string'];
+const dadosClient2: readonly [number, string] = [1, 'string'];
