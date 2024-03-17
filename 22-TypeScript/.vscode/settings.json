@@ -1,6 +1,6 @@
 {
     "code-runner.executorMap": {
         "javascript": "node",
-        "typescript": "cls && npx ts-node --files"
+        "typescript": "npx ts-node --files"
     }
 }
