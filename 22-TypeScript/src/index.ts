@@ -67,3 +67,23 @@ function addOrConcat(a: number | string, b: number | string): number | string {
 
 console.log(addOrConcat(10, 20));
 console.log(addOrConcat('Talison', ' 20'));
+
+//-----------------------------------------------
+
+type person = {
+    name: string;
+    age: number;
+    gender: string;
+    color: 'red' | 'blue' | 'green';
+};
+
+const person1: person = {
+    name: 'Talison',
+    age: 18,
+    gender: 'male',
+    color: 'red',
+};
+
+console.log(person1);
+
+//---------------------------------------
