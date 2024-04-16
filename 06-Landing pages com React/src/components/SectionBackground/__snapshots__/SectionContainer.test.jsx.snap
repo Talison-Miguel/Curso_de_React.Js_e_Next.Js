@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SectionBackground /> Should render with background dark 1`] = `
+.c0 {
+  background: #fff;
+  color: #0a1128;
+  background: #0a1128;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.c1 {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 3.2rem;
+}
+
+<div>
+  <div
+    background="true"
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <h1>
+        Children
+      </h1>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<SectionBackground /> Should render with background light 1`] = `
+.c0 {
+  background: #fff;
+  color: #0a1128;
+  background: #0a1128;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.c1 {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 3.2rem;
+}
+
+<div>
+  <div
+    background="false"
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <h1>
+        Children
+      </h1>
+    </div>
+  </div>
+</div>
+`;
