@@ -3,6 +3,7 @@ export const theme = {
         primaryColor: '#0a1128',
         secondaryBg: '#dc143c',
         white: '#fff',
+        mediumGray: '#DDDDDD',
     },
     font: {
         family: {
