@@ -8,15 +8,16 @@ import { TextComponent } from '../TextComponent/index';
 export function GridTwoCollumn({ title, text, srcImg, background = false }) {
     return (
         <SectionBackground background={background}>
-            <Styled.Container>
+            <Styled.Container background={background}>
                 <Styled.TextContainer>
-                    <Heading>{title}</Heading>
+                    <Heading uppercase colordark={!background}>
+                        {title}
+                    </Heading>
                     <TextComponent>{text}</TextComponent>
                 </Styled.TextContainer>
 
                 <Styled.ImageContainer>
-                    <Heading>{title}</Heading>
-                    <TextComponent>{text}</TextComponent>
+                    <Styled.Image src={srcImg} alt={title} />
                 </Styled.ImageContainer>
             </Styled.Container>
         </SectionBackground>
